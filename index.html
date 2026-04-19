@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        
+        <div class="search-section">
+            <form id="searchForm">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name..." 
+                    required
+                />
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+        </div>
+
+        <div class="unit-toggle">
+            <button id="celsiusBtn" class="unit-btn active" data-unit="C">°C</button>
+            <button id="fahrenheitBtn" class="unit-btn" data-unit="F">°F</button>
+        </div>
+
+        <div id="errorContainer" class="error-hidden"></div>
+
+        <div id="weatherCard" class="weather-card hidden">
+            <div class="loading-spinner hidden" id="loadingSpinner"></div>
+            <div class="weather-content">
+                <h2 id="cityName"></h2>
+                <div class="temperature-section">
+                    <div id="temperature" class="temperature"></div>
+                    <div id="condition" class="condition"></div>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <span class="detail-label">Humidity:</span>
+                        <span id="humidity" class="detail-value"></span>
+                    </div>
+                    <div class="detail">
+                        <span class="detail-label">Wind Speed:</span>
+                        <span id="windSpeed" class="detail-value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
